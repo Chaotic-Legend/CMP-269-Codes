@@ -8,7 +8,6 @@ public class StatisticsCalculator<I extends Number & Comparable<I>> implements S
     private I[] data;
     private int size;
     private static final int INITIAL_CAPACITY = 10;
-
     public StatisticsCalculator() {
         data = (I[]) new Number[INITIAL_CAPACITY];
         size = 0;
@@ -80,20 +79,31 @@ public class StatisticsCalculator<I extends Number & Comparable<I>> implements S
 
     @Override
     public double getMean() throws ArithmeticException {
-        if (size == 0) throw new ArithmeticException("Error: Empty Dataset.");
-        return getSum().doubleValue() / size;
+        if (size == 0) {
+            throw new ArithmeticException("Error: Empty Dataset.");
+        }
+        double sum = 0.0;
+        for (int i = 0; i < size; i++) {
+            sum += data[i].doubleValue();
+        }
+        return sum / size;
     }
 
     @Override
     public double getStandardDeviation() throws ArithmeticException {
-        if (size < 2) throw new ArithmeticException("Error: Samll Dataset.");
-        double mean = getMean();
-        double sumSquares = 0;
-        for (int i = 0; i < size; i++) {
-            double diff = data[i].doubleValue() - mean;
-            sumSquares += diff * diff;
+        if (size == 0) {
+            throw new ArithmeticException("Error: Empty Dataset.");
         }
-        return Math.sqrt(sumSquares / (size - 1));
+        if (size == 1) {
+            return 0.0;
+    }
+    double mean = getMean();
+    double sumSquares = 0.0;
+    for (int i = 0; i < size; i++) {
+        double diff = data[i].doubleValue() - mean;
+        sumSquares += diff * diff;
+    }
+    return Math.sqrt(sumSquares / size);
     }
 
     @Override
