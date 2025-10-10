@@ -60,6 +60,6 @@ public class Main {
         }
         stats.clear();
         System.out.println("\n=== After Clear ===");
-        System.out.println("StatisticsCalculator Empty? --> " + stats.isEmpty());
+        System.out.println("Is StatisticsCalculator Empty? ➞ " + stats.isEmpty());
     }
 }
