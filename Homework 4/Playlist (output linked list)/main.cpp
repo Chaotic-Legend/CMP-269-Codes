@@ -15,7 +15,6 @@ int main() {
     SongNode* headNode;
     SongNode* currNode;
     SongNode* lastNode;
-
     string songTitle;
     string songLength;
     string songArtist;
@@ -29,11 +28,9 @@ int main() {
     while (songTitle != "-1") {
         getline(cin, songLength);           // Read the length of the song.
         getline(cin, songArtist);           // Read the artist of the song.
-
         currNode = new SongNode(songTitle, songLength, songArtist); // Create a new node.
         lastNode->InsertAfter(currNode);    // Insert the new node after the last node.
         lastNode = currNode;                // Update lastNode to point to the new node.
-
         getline(cin, songTitle);            // Read the next song title.
     }
 
@@ -43,6 +40,5 @@ int main() {
 
     // This function call prints all songs in the playlist.
     PrintPlaylist(headNode);
-
     return 0;
 }
