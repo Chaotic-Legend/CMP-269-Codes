@@ -5,7 +5,6 @@ using namespace std;
 int main() {
     Triangle triangle1;
     Triangle triangle2;
-
     double b, h;
 
     // Read and set base and height for triangle1.
@@ -17,7 +16,6 @@ int main() {
     cin >> b >> h;
     triangle2.SetBase(b);
     triangle2.SetHeight(h);
-
     cout << "Triangle with smaller area:" << endl;
 
     // Compare the areas and output the triangle with the smaller area.
