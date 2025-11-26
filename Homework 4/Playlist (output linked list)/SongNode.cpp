@@ -36,5 +36,7 @@ void SongNode::PrintSongInfo() {
     cout << "Title: " << songTitle << endl;
     cout << "Length: " << songLength << endl;
     cout << "Artist: " << songArtist << endl;
-    cout << endl;
+    if (this->nextNodeRef != nullptr) {
+        cout << endl; // Print a blank line only if another song follows.
+    }
 }
