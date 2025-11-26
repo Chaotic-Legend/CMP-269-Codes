@@ -31,9 +31,9 @@ void ItemNode::InsertAfter(ItemNode& nodeLoc) {
 void ItemNode::InsertAtEnd(ItemNode* nodeLoc) {
     ItemNode* curr = this;
     while (curr->nextNodeRef != nullptr) {
-        curr = curr->nextNodeRef; // Traverse to the last node
+        curr = curr->nextNodeRef; // Traverse to the last node.
     }
-    curr->nextNodeRef = nodeLoc; // Add the new node at the end
+    curr->nextNodeRef = nodeLoc; // Add the new node at the end.
     nodeLoc->nextNodeRef = nullptr;
 }
 
