@@ -1,4 +1,4 @@
-// CMP 269: Programming Methods III - Homework0Review - Isaac D. Hoyos  
+// CMP 269: Programming Methods III - Homework 0 - Isaac D. Hoyos  
 import java.util.Random; // Required for shuffling.
 
 public class Homework0Review {
