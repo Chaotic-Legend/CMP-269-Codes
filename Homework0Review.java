@@ -2,7 +2,6 @@
 import java.util.Random; // Required for shuffling.
 
 public class Homework0Review {
-
     /**
      * Task 1: getRectangleArea
      * Calculates the area of a rectangle.
@@ -150,9 +149,7 @@ public class Homework0Review {
         return temp;
     }
 
-    /**
-     * Main Method Testing
-     */
+    // Main Method Testing
     public static void main(String[] args) {
         System.out.println("CMP 269: Programming Methods III - Homework0Review - Isaac D. Hoyos\n");
         
